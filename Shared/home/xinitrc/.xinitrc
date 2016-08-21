@@ -24,7 +24,8 @@ xset s off
 setxkbmap us -option caps:swapescape
 
 # Set desktop background
-feh --bg-scale '/home/benny/Wallpapers/CloudyMountains.png'
+backgroundfile=/home/benny/Sync/Wallpapers/CloudyMountains.jpg
+feh --bg-scale $backgroundfile
 
 # Disable PC Speaker
 xset -b
@@ -32,9 +33,6 @@ xset -b
 # Set clipboards to synchronize
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
-
-# Runs background image script
-sh ~/.fehbg
 
 # Starts bspwm
 sxhkd &
