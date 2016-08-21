@@ -36,8 +36,8 @@ autocutsel -selection PRIMARY -fork &
 
 # Starts bspwm
 sxhkd &
-setxkbmap dvp -option caps:swapescape &
 redshift -l 41.5:-81.4 &
+setxkbmap dvp -option caps:swapescape &
 exec bspwm
 
 
