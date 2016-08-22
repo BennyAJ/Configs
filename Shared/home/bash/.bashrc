@@ -19,3 +19,4 @@ alias ls="ls --color=always"
 export SUDO_EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
+export PATH=$PATH:/home/benny/.scripts

@@ -39,5 +39,3 @@ sxhkd &
 redshift -l 41.5:-81.4 &
 setxkbmap dvp -option caps:swapescape &
 exec bspwm
-
-
