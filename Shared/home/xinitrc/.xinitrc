@@ -21,6 +21,8 @@ xset -b
 xset r rate 200 20
 xset s off -dpms
 xset s off
+
+# Set keymap to us so that sxhkd will use it for hotkeys
 setxkbmap us -option caps:swapescape
 
 # Set desktop background
@@ -34,8 +36,11 @@ xset -b
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
 
-# Starts bspwm
+# Start sxhkd 
 sxhkd &
+
+# Start loading redshift
 redshift -l 41.5:-81.4 &
-setxkbmap dvp -option caps:swapescape &
+
+# Launch bspwm
 exec bspwm
