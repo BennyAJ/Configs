@@ -16,7 +16,16 @@ man() {
 # Alias ls to always use colors
 alias ls="ls --color=always"
 
+# Create a function to open man pages in vim
+vman() { vim <(man $1); }
+
+# Because I'm sick of typing that name
+alias music="ncmpcpp"
+
+# Set everything to use vim
 export SUDO_EDITOR=/usr/bin/vim
 export VISUAL=/usr/bin/vim
 export EDITOR=/usr/bin/vim
+
+# Add a scripts directory to home
 export PATH=$PATH:/home/benny/.scripts
