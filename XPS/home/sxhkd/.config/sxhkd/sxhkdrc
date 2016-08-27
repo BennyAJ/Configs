@@ -19,15 +19,15 @@ super + w
 
 # Rotate tree
 super + r
-	bspc desktop -R 90 
+	bspc node @focused:/ -R 90 
 
 # Flip tree vertically
 super + v
-	bspc desktop -F vertical
+	bspc node @focused:/ -F vertical
 
 # Flip tree vertically
 super + h
-	bspc desktop -F horizontal
+	bspc node -@focused:/ -F horizontal
 
 # Toggle floating and fullscreenn
 super + {s,f}
