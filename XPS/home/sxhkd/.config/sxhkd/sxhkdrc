@@ -1,80 +1,76 @@
-####################
-Program Launchers
-####################
+#####################
+# Universal Hotkeys #
+#####################
 super + Return
 	urxvt
 
 super + space
 	dmenu_run
 
-super + shift + f 
-	firefox
-
-####################
-WM Hotkeys
-####################
 # Close window
 super + w
 	bspc node -c
 
-# Rotate tree
-super + r
-	bspc node @focused:/ -R 90 
+# Toggle keyboard layout
+super + k
+    kbmaptoggle 
 
-# Flip tree vertically
-super + v
-	bspc node @focused:/ -F vertical
+#####################
+# Navigation Mode   # 
+#####################
 
-# Flip tree vertically
-super + h
-	bspc node -@focused:/ -F horizontal
-
-# Toggle floating and fullscreenn
-super + {s,f}
-	bspc node -t {floating,fullscreen}
+# Focus primary (biggest) node
+super + p
+    bspc node -f biggest
 
 # Cycle window focus
-super + {grave,Tab}
+super + {b, c}
 	bspc node -f {prev,next}
  
-# Switch desktops and move windows between them
-super + {_,shift + }{1-6}
-	bspc {desktop -f,node -d} ^{1-6}
+# Switch desktops 
+super + {o, e, u, h, t, n}
+	bspc desktop -f ^{1-6}
 
-# Move windows within a desktop
-super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {left,down,up,right}
+#####################
+# Modification Mode # 
+#####################
 
-# Disables pointer following focus
-super + alt + f
-    bspc config pointer_follows_focus false
+# Focus primary (biggest) node
+super + m : p
+    bspc node -s biggest
 
-# Enables pointer following focus
-super + alt + g
-    bspc config pointer_follows_focus true
+# Circulate focused node
+super + m : {b, c}
+	bspc node @focused:/ -C {backward, forward}
 
-# Reload sxhkd config
-super + c
-	pkill -USR1 -x sxhkd
+# Rotate tree
+super + m : r
+	bspc node @focused:/ -R 90 
 
-####################
-Misc Hotkeys
-####################
-super + alt + m
-    hotplugmonitor
+# Flip tree across the y axis
+super + m : y
+	bspc node @focused:/ -F vertical
 
-super + b
-    xbacklight -dec 10 
+# Flip tree across the x axis
+super + m : x
+	bspc node @focused:/ -F horizontal
 
-super + n
-    xbacklight -inc 10
+# Move focused node between desktops 
+super + m : {o, e, u, h, t, n}
+	bspc node -d ^{1-6}
 
-# Switch to dvorak mode
-super + d
-    setxkbmap dvp -option caps:swapescape
+# Set split size to small, medium, or large
+super + m : {s, m, l}
+    bspc node @focused:/ -r {0.25, 0.5, 0.75}
 
-# Switch to qwerty mode
-super + q
-    setxkbmap us -option caps:swapescape
+#####################
+# Split Mode        # 
+#####################
 
-setxkbmap dvp -option caps:swapescape
+# Select split direction
+super + s : {d, h, t, n}
+    bspc node -p ~{west,south,north,east}
+
+# Set presel split size to small, medium, or large
+super + s : {s, m, l}
+    bspc node -o {0.75, 0.5, 0.25}
