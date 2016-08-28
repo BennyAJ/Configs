@@ -14,4 +14,3 @@ bspc config remove_disabled_monitors    true
 bspc config remove_unplugged_monitors    true
 
 hotplugmonitor
-setxkbmap dvp -option caps:swapescape

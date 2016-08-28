@@ -22,8 +22,8 @@ xset r rate 200 20
 xset s off -dpms
 xset s off
 
-# Set keymap to us so that sxhkd will use it for hotkeys
-setxkbmap us -option caps:swapescape
+# Set keymap to programmer's dvorak
+setxkbmap dvp -option caps:swapescape
 
 # Set desktop background
 backgroundfile=/home/benny/Sync/Wallpapers/CloudyMountains.jpg
