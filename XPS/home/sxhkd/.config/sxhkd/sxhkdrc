@@ -15,6 +15,9 @@ super + w
 super + k
     kbmaptoggle 
 
+# Change monitor layout automatically
+super + l
+    hotplugmonitor
 
 #####################
 # Mouse Bindings    # 
