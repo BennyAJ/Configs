@@ -29,3 +29,6 @@ export EDITOR=/usr/bin/vim
 
 # Add a scripts directory to home
 export PATH=$PATH:/home/benny/.scripts
+
+# Add ruby gems directory to path
+export PATH=$PATH:/home/benny/.gem/ruby/2.30/bin
