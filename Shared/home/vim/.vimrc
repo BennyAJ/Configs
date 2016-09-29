@@ -18,7 +18,7 @@ let mapleader=","
 set cursorline
 
 " Set up column to match line length of 120
-autocmd FileType python set colorcolumn=120
+set colorcolumn=120
 
 " Change background color of color column 
 highlight ColorColumn ctermbg=241
