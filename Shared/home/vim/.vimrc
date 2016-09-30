@@ -1,6 +1,10 @@
 " Set Leader Key to , "
 let mapleader=","
 
+" Enable syntax highlighting
+filetype plugin on
+syntax on
+
 " Show Relative Line Numbers with number on current line by default
 set relativenumber
 set number
