@@ -10,5 +10,6 @@ bspc config focus_by_distance           true
 bspc config pointer_follows_focus       false
 bspc config pointer_follows_monitor     true
 bspc config focus_follows_pointer       true
-bspc config remove_disabled_monitors    true
-bspc config remove_unplugged_monitors    true
+
+bspc monitor eDP1 -a 1 2 3 4 5 6
+hotplugmonitor

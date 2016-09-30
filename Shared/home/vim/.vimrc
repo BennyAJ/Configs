@@ -1,3 +1,6 @@
+" Set Leader Key to , "
+let mapleader=","
+
 " Show Relative Line Numbers with number on current line by default
 set relativenumber
 set number
@@ -5,14 +8,17 @@ set number
 " Toggle Paste Mode
 set pastetoggle=<s>
 
+" Toggle showing invisible characters
+nmap <leader>l :set list!<CR>
+
+" Set characters shown for invisible characters
+set listchars=tab:▸\ ,eol:¬
+
 " Various Tab Related Options
 set tabstop=4
 set shiftwidth=4
 set expandtab
 set softtabstop=4
-
-" Set Leader Key to , "
-let mapleader=","
 
 " Place line on current location of cursor "
 set cursorline
