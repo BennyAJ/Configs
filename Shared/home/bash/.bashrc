@@ -32,3 +32,7 @@ export PATH=$PATH:/home/benny/.scripts
 
 # Add ruby gems directory to path
 export PATH=$PATH:/home/benny/.gem/ruby/2.30/bin
+
+# Settings to make Matlab functional
+wmname LG3D
+export J2D_D3D=false

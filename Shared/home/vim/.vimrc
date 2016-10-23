@@ -27,8 +27,8 @@ set softtabstop=4
 " Place line on current location of cursor "
 set cursorline
 
-" Set up column to match line length of 120
-set colorcolumn=120
+" Set up column to match line length of 80
+set colorcolumn=80
 
 " Change background color of color column 
 highlight ColorColumn ctermbg=241
@@ -57,6 +57,10 @@ nnoremap <C-H> <C-W><C-J>
 nnoremap <C-T> <C-W><C-K>
 nnoremap <C-N> <C-W><C-L>
 nnoremap <C-D> <C-W><C-H>
+
+" Create hotkeys to change tab size
+nmap <leader>t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
+nmap <leader>m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR> 
 
 " Create toggle for relative line numbering "
 function! NumberToggle()
