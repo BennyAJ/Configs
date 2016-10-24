@@ -36,3 +36,11 @@ export PATH=$PATH:/home/benny/.gem/ruby/2.30/bin
 # Settings to make Matlab functional
 wmname LG3D
 export J2D_D3D=false
+
+# Start ssh-agent
+if ! pgrep -u $USER ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval $(<~/.ssh-agent-thing)
+fi
