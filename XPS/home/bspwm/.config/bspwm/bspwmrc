@@ -11,5 +11,6 @@ bspc config pointer_follows_focus       false
 bspc config pointer_follows_monitor     true
 bspc config focus_follows_pointer       true
 
-bspc monitor eDP1 -a 1 2 3 4 5 6
-hotplugmonitor
+xrandr --output DP1-1 --off
+xrandr --output eDP1 --auto
+bspc monitor eDP1 -d 1 2 3 4 5 6
