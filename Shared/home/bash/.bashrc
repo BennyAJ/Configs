@@ -31,7 +31,7 @@ export EDITOR=/usr/bin/vim
 export PATH=$PATH:/home/benny/.scripts
 
 # Add ruby gems directory to path
-export PATH=$PATH:/home/benny/.gem/ruby/2.30/bin
+export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # Settings to make Matlab functional
 wmname LG3D
