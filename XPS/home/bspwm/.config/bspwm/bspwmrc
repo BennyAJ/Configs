@@ -14,3 +14,4 @@ bspc config focus_follows_pointer       true
 xrandr --output DP1-1 --off
 xrandr --output eDP1 --auto
 bspc monitor eDP1 -d 1 2 3 4 5 6
+hotplugmonitor
