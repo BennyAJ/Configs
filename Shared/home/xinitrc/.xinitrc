@@ -40,7 +40,7 @@ autocutsel -selection PRIMARY -fork &
 sxhkd &
 
 # Start loading redshift
-redshift -l 41.5:-81.4 &
+redshift &
 
 # Launch bspwm
 exec bspwm

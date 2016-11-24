@@ -3,3 +3,4 @@
 	name = Benny Johnson
 [core]
 	editor = vim
+	autocrlf = input

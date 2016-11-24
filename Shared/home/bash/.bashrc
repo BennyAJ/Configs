@@ -16,6 +16,9 @@ man() {
 # Alias ls to always use colors
 alias ls="ls --color=always"
 
+# Alias to make connecting to the server not a pain in the ass
+alias neo4jubuntufree="ssh ubuntu@ec2-52-15-161-167.us-east-2.compute.amazonaws.com"
+
 # Create a function to open man pages in vim
 vman() { vim <(man $1); }
 
