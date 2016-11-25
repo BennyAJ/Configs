@@ -1,3 +1,17 @@
+set nocompatible
+filetype off
+
+" Handle plugins
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'Vundle/Vundle.vim'
+Plugin 'christoomey/vim-tmux-navigator'
+
+call vundle#end()
+
+filetype plugin indent on
+
 " Set Leader Key to , "
 let mapleader=","
 
@@ -8,6 +22,10 @@ syntax on
 " Show Relative Line Numbers with number on current line by default
 set relativenumber
 set number
+
+" Set splits to be placed more intuitively (down and right)
+set splitbelow
+set splitright
 
 " Toggle Paste Mode
 set pastetoggle=<s>
@@ -52,11 +70,20 @@ no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
 
+" Map keys for split movement
+let g:tmux_navigator_no_mappings = 1
+
+nnoremap <silent> <C-d> :TmuxNavigateLeft<cr>
+nnoremap <silent> <C-h> :TmuxNavigateDown<cr>
+nnoremap <silent> <C-t> :TmuxNavigateUp<cr>
+nnoremap <silent> <C-n> :TmuxNavigateRight<cr>
+nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
+
 " Map keys to move between splits "
-nnoremap <C-H> <C-W><C-J>
-nnoremap <C-T> <C-W><C-K>
-nnoremap <C-N> <C-W><C-L>
-nnoremap <C-D> <C-W><C-H>
+" nnoremap <C-H> <C-W><C-J>
+" nnoremap <C-T> <C-W><C-K>
+" nnoremap <C-N> <C-W><C-L>
+" nnoremap <C-D> <C-W><C-H>
 
 " Create hotkeys to change tab size
 nmap <leader>t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
