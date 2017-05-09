@@ -12,8 +12,12 @@ call vundle#end()
 
 filetype plugin indent on
 
+" Add .cpp highlighting to .tpp files
+autocmd BufEnter *.tpp :setlocal filetype=cpp
+
 " Set Leader Key to , "
 let mapleader=","
+let maplocalleader=","
 
 " Enable syntax highlighting
 filetype plugin on
@@ -31,16 +35,16 @@ set splitright
 set pastetoggle=<s>
 
 " Toggle showing invisible characters
-nmap <leader>l :set list!<CR>
+nmap <leader>i :set list!<CR>
 
 " Set characters shown for invisible characters
 set listchars=tab:▸\ ,eol:¬
 
 " Various Tab Related Options
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
-set softtabstop=4
+set softtabstop=2
 
 " Place line on current location of cursor "
 set cursorline

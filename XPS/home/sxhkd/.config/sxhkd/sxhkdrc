@@ -17,7 +17,7 @@ super + k
 
 # Change monitor layout automatically
 super + l
-    hotplugmonitor
+    hotplugdoublehorizontal
 
 #####################
 # Mouse Bindings    # 
