@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Depends = coreutils
+When = PreTransaction
+Exec = /usr/bin/remove-snapshots
