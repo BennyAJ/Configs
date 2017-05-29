@@ -2,5 +2,5 @@
 	email = bennyaj@umich.edu
 	name = Benny Johnson
 [core]
-	editor = vim
+	editor = nvim
 	autocrlf = input

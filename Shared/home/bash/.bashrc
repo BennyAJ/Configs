@@ -23,15 +23,15 @@ vman() { vim <(man $1); }
 alias music="ncmpcpp"
 
 # Set everything to use vim
-export SUDO_EDITOR=/usr/bin/vim
-export VISUAL=/usr/bin/vim
-export EDITOR=/usr/bin/vim
+export SUDO_EDITOR=/usr/bin/nvim
+export VISUAL=/usr/bin/nvim
+export EDITOR=/usr/bin/nvim
 
 # Add a scripts directory to home
 export PATH=$PATH:/home/benny/.scripts
 
 # Add ruby gems directory to path
-export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+#export PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 
 # Settings to make Matlab functional
 export J2D_D3D=false
