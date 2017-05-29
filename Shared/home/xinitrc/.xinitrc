@@ -14,8 +14,8 @@ fi
 # Loads terminal colors
 xrdb ~/.Xresources
 
-# Set keymap to programmer's dvorak
-setxkbmap dvp -option caps:swapescape
-
 # Disable PC Speaker
 xset -b
+
+sxhkd &
+exec bspwm
