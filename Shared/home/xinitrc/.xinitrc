@@ -11,11 +11,16 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# Sets QT to use QGtkStyle
+export QT_QPA_PLATFORMTHEME=gtk2
+
 # Loads terminal colors
 xrdb ~/.Xresources
+
+./.fehbg
 
 # Disable PC Speaker
 xset -b
 
-sxhkd &
+sxhkd -m -1 &
 exec bspwm

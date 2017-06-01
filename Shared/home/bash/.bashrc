@@ -17,7 +17,7 @@ man() {
 alias ls="ls --color=always"
 
 # Create a function to open man pages in vim
-vman() { vim <(man $1); }
+vman() { nvim <(man $1); }
 
 # Because I'm sick of typing that name
 alias music="ncmpcpp"

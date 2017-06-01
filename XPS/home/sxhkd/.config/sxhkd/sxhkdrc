@@ -5,7 +5,7 @@ super + Return
 	urxvt
 
 super + space
-	dmenu_run
+	rofi -show run
 
 # Close window
 super + w
