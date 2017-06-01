@@ -1,41 +1,78 @@
-! Terminal Transparency
-URxvt.depth: 32
+! Stolen from https://github.com/Chabam/dotfiles
 
-! Colors
-URxvt*termName: rxvt-256color
-URxvt*xftAntialias: true
-*background:   [85]#1e1f28
-*foreground:   #ebece6
-URxvt*cursorColor:   #e4e4e4
-*color0:   #000
-*color1:   #fb4245
-*color2:   #50fa7b
-*color3:   #f0fa8b
-*color4:   #49b9fe
-*color5:   #fb4cb3
-*color6:   #8be9fd
-*color7:   #ededec
-*color8:   #555555
-*color9:   #fb4245
-*color10:   #50fa7b
-*color11:   #f0fa8b
-*color12:   #49b9fe
-*color13:   #fb4cb3
-*color14:   #8be9fd
-*color15:   #ededec
+URXVT*scrollTtyOutput: false
+URXVT*scrollWithBuffer: true
+URXT*scrollTtyKeypress: true
 
 ! Font
 URxvt*font:xft:DejaVu Sans Mono:pixelsize=13:antialias=true:hinting=true
 URxvt*boldFont:xft:DejaVu Sans Mono:bold:pixelsize=13:antialias=true:hinting=true
 
-! Disable Scrollbar
-URxvt.scrollBar: false
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
+xvt.scrollStyle:          rxvt
+URxvt.scrollBar:          false
+
+! Base16 Default Dark
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+#define base00 #1e1f28
+#define base01 #282828
+#define base02 #383838
+#define base03 #585858
+#define base04 #b8b8b8
+#define base05 #d8d8d8
+#define base06 #e8e8e8
+#define base07 #f8f8f8
+#define base08 #ab4642
+#define base09 #dc9656
+#define base0A #f7ca88
+#define base0B #a1b56c
+#define base0C #86c1b9
+#define base0D #7cafc2
+#define base0E #ba8baf
+#define base0F #a16946
+
+*.foreground:   base05
+#ifdef background_opacity
+*.background:   [background_opacity]base00
+#else
+*.background:   base00
+#endif
+*.cursorColor:  base05
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
+
+! Note: colors beyond 15 might not be loaded (e.g., xterm, urxvt),
+! use 'shell' template to set these if necessary
+*.color16:      base09
+*.color17:      base0F
+*.color18:      base01
+*.color19:      base02
+*.color20:      base04
+*.color21:      base06
+
 rofi.color-enabled: true
-rofi.color-window: #1e1f28, #ebece6, #000000
-rofi.color-normal: #1e1f28, #ebece6, argb:22555555, argb:a449b9fe, #ededec
-rofi.color-active: #1e1f28, #ebece6, argb:29555555, argb:a349b9fe, #ededec
-rofi.color-urgent: #1e1f28, #ebece6, argb:10555555, argb:b549b9fe, #ededec
+rofi.color-window: base00, #ffffff, base00
+rofi.color-normal: base00, #ffffff, base00, #ffffff, base00
+rofi.color-active: base00, #cddc39, base00, #cddc39, base00
+rofi.color-urgent: base00, #ff5722, base00, #ff5722, base00
+
