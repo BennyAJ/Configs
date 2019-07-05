@@ -1,9 +1,0 @@
-[Trigger]
-Operation = Install
-Type = Package
-Target = *
-
-[Action]
-Depends = coreutils
-When = PreTransaction
-Exec = /usr/bin/install-snapshots

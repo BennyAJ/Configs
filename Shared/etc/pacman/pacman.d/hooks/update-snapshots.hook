@@ -1,9 +1,0 @@
-[Trigger]
-Operation = Upgrade
-Type = Package
-Target = *
-
-[Action]
-Depends = coreutils
-When = PreTransaction
-Exec = /usr/bin/update-snapshots
