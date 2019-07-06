@@ -1,0 +1,6 @@
+# /dev/nvme0n1p5 LABEL=Data
+UUID=04819c33-4129-4870-a413-ccbf5306ffdd	/home/benny/Data	ext4	rw,relatime	0 1
+
+# /dev/nvme0n1p4 LABEL=Swap
+UUID=ce235b8f-5b7c-470b-81af-496ad9c6561a	none      	swap      	defaults  	0 0
+
