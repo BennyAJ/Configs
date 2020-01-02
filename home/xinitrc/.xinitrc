@@ -24,5 +24,6 @@ xset -b
 
 autocutsel -fork &
 autocutsel -selection PRIMARY -fork &
-sxhkd -m -1 &
-exec bspwm
+exec awesome
+# sxhkd -m -1 &
+#exec bspwm

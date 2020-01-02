@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-cd /home/benny/Data/Configs/home
+cd home
 
 for pkg in *
 do
