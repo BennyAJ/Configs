@@ -1,7 +1,0 @@
-set zoom-step 20
-set scroll-step 80
-
-set selection-clipboard clipboard
-
-map h scroll down
-map t scroll up

@@ -65,21 +65,6 @@ no H 8<Down>
 no T 8<Up>
 no D <C-w><C-r>
 
-" Map keys for split movement
-let g:tmux_navigator_no_mappings = 1
-
-nnoremap <silent> <C-d> :TmuxNavigateLeft<cr>
-nnoremap <silent> <C-h> :TmuxNavigateDown<cr>
-nnoremap <silent> <C-t> :TmuxNavigateUp<cr>
-nnoremap <silent> <C-n> :TmuxNavigateRight<cr>
-nnoremap <silent> <C-\> :TmuxNavigatePrevious<cr>
-
-" Map keys to move between splits "
-" nnoremap <C-H> <C-W><C-J>
-" nnoremap <C-T> <C-W><C-K>
-" nnoremap <C-N> <C-W><C-L>
-" nnoremap <C-D> <C-W><C-H>
-
 " Create hotkeys to change tab size
 nmap <leader>t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap <leader>m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR> 
