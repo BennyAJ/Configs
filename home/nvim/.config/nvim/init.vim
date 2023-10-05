@@ -3,9 +3,6 @@ filetype off
 
 filetype plugin indent on
 
-" Add .cpp highlighting to .tpp files
-autocmd BufEnter *.tpp :setlocal filetype=cpp
-
 " Set Leader Key to , "
 let mapleader=","
 let maplocalleader=","
@@ -41,7 +38,7 @@ set softtabstop=2
 set cursorline
 
 " Set up column to match line length of 80
-set colorcolumn=80
+set colorcolumn=120
 
 " Change background color of color column 
 highlight ColorColumn ctermbg=241
