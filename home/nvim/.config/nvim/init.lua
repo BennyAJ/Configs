@@ -1,3 +1,4 @@
+vim.cmd([[
 set nocompatible
 filetype off
 
@@ -37,7 +38,7 @@ set softtabstop=2
 " Place line on current location of cursor "
 set cursorline
 
-" Set up column to match line length of 80
+" Set up column to match line length
 set colorcolumn=120
 
 " Change background color of color column 
@@ -65,6 +66,7 @@ no D <C-w><C-r>
 " Create hotkeys to change tab size
 nmap <leader>t :set expandtab tabstop=4 shiftwidth=4 softtabstop=4<CR>
 nmap <leader>m :set expandtab tabstop=2 shiftwidth=2 softtabstop=2<CR> 
+nmap <leader>w :set expandtab tabstop=3 shiftwidth=3 softtabstop=3<CR> 
 
 " Create toggle for relative line numbering "
 function! NumberToggle()
@@ -76,3 +78,19 @@ function! NumberToggle()
 endfunc
 
 nnoremap <C-l> :call NumberToggle()<cr>
+]])
+
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost init.lua source <afile> | PackerCompile
+  augroup end
+]])
+
+return require('packer').startup(function(use)
+
+  use 'wbthomason/packer.nvim'
+  use 'tpope/vim-obsession'
+
+end)
+
